@@ -1,0 +1,17 @@
+{
+  "name": "loot-generator",
+  "version": "1.0.0",
+  "description": "The LootGenerator Backend REST Api for boardgametools.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mysql",
+    "restapi"
+  ],
+  "author": "Fabian Brecht",
+  "license": "ISC"
+}
