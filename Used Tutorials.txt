@@ -1,0 +1,7 @@
+https://www.javahelps.com/2018/10/install-mysql-with-phpmyadmin-on-ubuntu.html
+
+https://www.bezkoder.com/node-js-rest-api-express-mysql/
+
+https://www.bezkoder.com/node-js-express-file-upload/
+
+https://www.ionos.de/digitalguide/websites/web-entwicklung/nodejs-fuer-eine-website-mit-apache-auf-ubuntu/
