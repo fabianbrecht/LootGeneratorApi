@@ -19,7 +19,7 @@ app.use(cors({
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Backend REST API for boardgametools.com Loot Generator" });
+  res.json({ message: "Backend REST API for tabletop-toolkit.com Loot Generator" });
 });
 
 require("./app/routes/rarity.routes.js")(app);
