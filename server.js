@@ -30,6 +30,6 @@ require("./app/routes/loot.routes.js")(app);
 
 
 // set port, listen for requests
-app.listen(8080, () => {
-  console.log("Server is running on port 8080.");
+app.listen(3001, () => {
+  console.log("Server is running on port 3001.");
 });
