@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors({
-  origin: ['http://localhost:8080', 'https://tabletop-toolkit.com/', '/\.tabletop-toolkit.com\.com$/''],
+  origin: ["http://localhost:8080", "https://tabletop-toolkit.com/", "/\.tabletop-toolkit.com\.com$/"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
   preflightContinue: false,
