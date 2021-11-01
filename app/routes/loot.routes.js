@@ -11,7 +11,7 @@ module.exports = app => {
     app.get("/loot/:lootId", loot.findOne);
   
   // Retrieve a single Customer with lootId
-    app.get("/loot/:subcategoryId/:categoryId/:rarityId", loot.findAllBysubCategory);
+    app.get("/loot/:subcategoryId/:categoryId/:rarityIdMin/:rarityIdMax", loot.findAllBysubCategory);
   
     // Retrieve a single Customer with lootId
     // app.get("/lootByCategory/:categoryId", loot.findOneByCategoryId);

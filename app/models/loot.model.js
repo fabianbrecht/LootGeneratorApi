@@ -11,11 +11,13 @@ function Loot(loot) {
   this.tags = loot.tags;
 };
 
-function Loot(name, description, subcategory_id, rarity_id, image_path, approved, tags) {
+function Loot(name, description, subcategory_id, rarity_id, rarity_idMin, rarity_idMax, image_path, approved, tags) {
   this.name = name;
   this.description = description;
   this.subcategory_id = subcategory_id;
   this.rarity_id = rarity_id;
+  this.rarity_idMin = rarity_idMin;
+  this.rarity_idMax = rarity_idMax;
   this.image_path = image_path;
   this.approved = approved;
   this.tags = tags;
@@ -88,9 +90,9 @@ Loot.getAll = result => {
 Loot.getAllBySubCategoryId = (params, result) => {
   var query = ``;
   if (params.subcategoryId == 0) { 
-    query = `SELECT l.name, l.description FROM LOOT as l, SUBCATEGORY as s WHERE l.subcategory_id IN (SELECT s.id FROM SUBCATEGORY WHERE s.category_id = ${params.categoryId}) AND l.rarity_id = ${params.rarityId} AND l.approved = true`;
+    query = `SELECT l.name, l.description FROM LOOT as l, SUBCATEGORY as s WHERE l.subcategory_id IN (SELECT s.id FROM SUBCATEGORY WHERE s.category_id = ${params.categoryId}) AND l.rarity_id BETWEEN ${params.rarityIdMin} AND ${params.rarityIdMax} AND l.approved = true`;
   } else {
-    query = `SELECT * FROM LOOT WHERE subcategory_id = ${params.subcategoryId} AND rarity_id = ${params.rarityId} AND approved = true`;
+    query = `SELECT * FROM LOOT WHERE subcategory_id = ${params.subcategoryId} AND rarity_id BETWEEN ${params.rarityIdMin} AND ${params.rarityIdMax} AND approved = true`;
   }
   console.log(query);
 

@@ -24,6 +24,8 @@ exports.create = (req, res) => {
     req.body.description,
     req.body.subCategoryId,
     req.body.rarityId,
+    req.body.rarityIdMin,
+    req.body.rarityIdMax,
     null,
     false,
     req.body.tags
