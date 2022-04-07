@@ -4,6 +4,7 @@ const sql = require("../db.js");
 const System = function(system) {
   this.name = system.name;
   this.description = system.description;
+  this.active = system.active;
 };
 
 // System.create = (newSystem, result) => {
