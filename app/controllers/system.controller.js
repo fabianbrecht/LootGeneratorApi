@@ -13,6 +13,7 @@ exports.create = (req, res) => {
   const system = new System({
     name: req.body.name,
     description: req.body.description,
+    active: req.body.active,
   });
 
   // Save System in the database
