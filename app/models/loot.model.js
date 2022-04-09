@@ -12,13 +12,13 @@ function Loot(loot) {
 };
 
 function Loot(name, description, subcategory_id, rarity_id, image_path, approved, tags) {
-  this.name = loot.name;
-  this.description = loot.description;
-  this.subcategory_id = loot.subCategoryId;
-  this.rarity_id = loot.rarity_id;
+  this.name = name;
+  this.description = description;
+  this.subcategory_id = subcategory_id;
+  this.rarity_id = rarity_id;
   this.image_path = null;
   this.approved = false;
-  this.tags = loot.tags;
+  this.tags = tags;
 };
 
 function Loot(name, description, subcategory_id, rarity_id, rarity_idMin, rarity_idMax, image_path, approved, tags) {
