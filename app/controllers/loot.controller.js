@@ -19,17 +19,7 @@ exports.create = (req, res) => {
   console.log(req);
 
   // Create a Loot
-  const loot = new Loot(
-    req.body.name,
-    req.body.description,
-    req.body.subCategoryId,
-    req.body.rarityId,
-    req.body.rarityIdMin,
-    req.body.rarityIdMax,
-    null,
-    false,
-    req.body.tags
-  );
+  const loot = new Loot(req.body);
 
   console.log(loot);
 
