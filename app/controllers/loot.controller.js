@@ -16,6 +16,7 @@ exports.create = (req, res) => {
     });
   }
 
+  console.log("Request:");
   console.log(req);
 
   // Create a Loot
@@ -25,10 +26,13 @@ exports.create = (req, res) => {
     req.body.subCategoryId,
     req.body.rarityId,
     null,
+    null,
+    null,
     false,
     req.body.tags
   );
 
+  console.log("Loot:");
   console.log(loot);
 
   // Save Loot in the database

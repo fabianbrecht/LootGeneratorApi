@@ -11,16 +11,6 @@ function Loot(loot) {
   this.tags = loot.tags;
 };
 
-function Loot(name, description, subcategory_id, rarity_id, image_path, approved, tags) {
-  this.name = name;
-  this.description = description;
-  this.subcategory_id = subcategory_id;
-  this.rarity_id = rarity_id;
-  this.image_path = null;
-  this.approved = false;
-  this.tags = tags;
-};
-
 function Loot(name, description, subcategory_id, rarity_id, rarity_idMin, rarity_idMax, image_path, approved, tags) {
   this.name = name;
   this.description = description;
@@ -34,7 +24,9 @@ function Loot(name, description, subcategory_id, rarity_id, rarity_idMin, rarity
 };
 
 Loot.create = (newLoot, result) => {
-  sql.query("INSERT INTO LOOT SET ?", newLoot, (err, res) => {
+  console.log("Loot to create:");
+  console.log(newLoot);
+  sql.query(`INSERT INTO LOOT SET name = ?, description = ?, subcategory_id = ?, rarity_id = ?, image_path = ?, approved = ?, tags = ?`, [newLoot.name, newLoot.description, newLoot.subcategory_id, newLoot.rarity_id, newLoot.image_path, newLoot.approved, newLoot.tags],  (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);
